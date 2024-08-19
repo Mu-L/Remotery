@@ -6584,7 +6584,7 @@ static rmtError Remotery_SendSampleTreeMessage(Remotery* rmt, Message* message)
         rmt_EndCPUSample();
         if (!are_samples_ready)
         {
-            QueueSampleTree(rmt->mq_to_rmt_thread, sample, sample_tree->allocator, sample_tree->threadName,
+            QueueSampleTree(rmt->mq_to_rmt_thread, sample, sample_tree->allocator, sample_tree->threadName, 0,
                                 message->threadProfiler, RMT_FALSE);
             return RMT_ERROR_NONE;
         }
