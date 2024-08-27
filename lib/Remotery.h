@@ -1197,16 +1197,17 @@ RMT_API const char*         _rmt_PropertyGetName(rmtProperty* property);
 RMT_API const char*         _rmt_PropertyGetDescription(rmtProperty* property);
 RMT_API rmtPropertyValue    _rmt_PropertyGetValue(rmtProperty* property);
 
-#ifdef __cplusplus
-
-}
-#endif
 
 #if RMT_USE_METAL
 #ifdef __OBJC__
 RMT_API void _rmt_BindMetal(id command_buffer);
 RMT_API void _rmt_UnbindMetal();
 #endif
+#endif
+
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif  // RMT_ENABLED
